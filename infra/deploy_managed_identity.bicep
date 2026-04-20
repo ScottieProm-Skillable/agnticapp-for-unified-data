@@ -27,14 +27,16 @@ resource ownerRoleDefinition 'Microsoft.Authorization/roleDefinitions@2018-01-01
   name: '8e3af657-a8ff-443c-a75c-2fe8c4bcb635'
 }
 
-resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
-  name: guid(resourceGroup().id, managedIdentity.id, ownerRoleDefinition.id)
-  properties: {
-    principalId: managedIdentity.properties.principalId
-    roleDefinitionId:  ownerRoleDefinition.id
-    principalType: 'ServicePrincipal' 
-  }
-}
+// resource roleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+//   name: guid(resourceGroup().id, managedIdentity.id, ownerRoleDefinition.id)
+//   properties: {
+//     principalId: managedIdentity.properties.principalId
+//     roleDefinitionId:  ownerRoleDefinition.id
+//     principalType: 'ServicePrincipal' 
+//   }
+// }
+
+
 
 resource managedIdentityBackendApp 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
   name: '${solutionName}-backend-app-mi'
