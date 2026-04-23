@@ -119,10 +119,6 @@ var uniqueId = toLower(uniqueString(subscription().id, environmentName, solution
 @metadata({
   azd:{
     type: 'location'
-    usageName: [
-      'OpenAI.GlobalStandard.gpt-4o-mini,150'
-      'OpenAI.GlobalStandard.text-embedding-ada-002,80'
-    ]
   }
 })
 @description('Location for AI Foundry deployment. This is the location where the AI Foundry resources will be deployed.')
