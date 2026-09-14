@@ -11,7 +11,8 @@
         "ghcr.io/devcontainers/features/common-utils:2": {
             "installZsh": false,
             "installOhMyZsh": false,
-            "installAptPackages": "unixodbc unixodbc-dev bash"
+            "installAptPackages": "unixodbc unixodbc-dev bash",
+            "upgradePackages": false
         }
     },
     "customizations": {
